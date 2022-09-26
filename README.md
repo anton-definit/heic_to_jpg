@@ -1,12 +1,15 @@
-# heic_to_jpg
+# heic_jpg
 
-HEIC to JPG converter Flutter plugin
+A new Flutter project.
 
 ## Getting Started
 
-Usage:
+This project is a starting point for a Flutter
+[plug-in package](https://flutter.dev/developing-packages/),
+a specialized package that includes platform-specific implementation code for
+Android and/or iOS.
 
-String heicPath = '<path_to_file>';<br/>
-String jpgPath = await HeicToJpg.convert(heicPath);
+For help getting started with Flutter development, view the
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
 
-Not implemented for Android platform.
