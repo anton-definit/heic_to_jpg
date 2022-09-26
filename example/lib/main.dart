@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              RaisedButton(
+              ElevatedButton(
                 child: const Text('Pick a file...'),
                 onPressed: _pickFile,
               ),
