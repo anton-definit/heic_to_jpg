@@ -47,15 +47,21 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _pickFile() async {
-    final path = await FilePicker.getFilePath(
-        type: FileType.CUSTOM, fileExtension: "HEIC");
-    if (path != null) {
-      final jpgPath = await HeicToJpg.convert(path);
-      if (jpgPath != null) {
-        setState(() {
-          _path = jpgPath;
-        });
+    var result = await FilePicker.platform.pickFiles();
+
+    if (result != null) {
+      var path = result.files.single.path;
+
+      if (path != null) {
+        final jpgPath = await HeicToJpg.convert(path);
+        if (jpgPath != null) {
+          setState(() {
+            _path = jpgPath;
+          });
+        }
       }
+    } else {
+      // User canceled the picker
     }
   }
 }
